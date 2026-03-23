@@ -1,6 +1,8 @@
 # 🔍 CekPejabat.id
 
 > Platform transparansi pejabat publik Indonesia berbasis AI — gratis, terbuka, untuk semua rakyat.
+> 🌐 **[Lihat Preview Mockup →](https://fajaralamsyahh.github.io/cekpejabat/cekpejabat.html)**
+
 
 ![Status](https://img.shields.io/badge/status-in%20development-yellow)
 ![License](https://img.shields.io/badge/license-MIT-green)
