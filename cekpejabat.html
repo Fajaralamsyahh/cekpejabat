@@ -1075,6 +1075,337 @@
   </div>
 </section>
 
+<!-- PETA INDONESIA -->
+<section style="background:var(--hitam);padding:80px 48px;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="section-tag" style="color:var(--emas)">
+      <span style="display:inline-block;width:24px;height:1px;background:var(--emas);margin-right:8px;vertical-align:middle"></span>
+      Jelajah Per Provinsi
+    </div>
+    <h2 style="font-family:'Playfair Display',serif;color:white;font-size:clamp(28px,3.5vw,42px);font-weight:900;letter-spacing:-1.5px;margin-bottom:12px;">Pilih provinsimu,<br>cek pejabatnya</h2>
+    <p style="color:rgba(255,255,255,0.45);font-size:14px;margin-bottom:40px;font-family:'DM Mono',monospace;">34 provinsi · Data pejabat aktif · Diperbarui berkala</p>
+
+    <!-- PETA VISUAL -->
+    <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:32px;margin-bottom:40px;overflow-x:auto;">
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;color:rgba(255,255,255,0.3);text-transform:uppercase;margin-bottom:20px;text-align:center;">🗺 Peta Interaktif Indonesia — Klik Pulau untuk Lihat Provinsi</div>
+      
+      <!-- VISUAL MAP USING DIV LAYOUT -->
+      <div style="display:flex;flex-direction:column;gap:16px;min-width:700px;">
+        
+        <!-- ROW 1: Sumatera + sebagian Kalimantan -->
+        <div style="display:flex;gap:12px;align-items:flex-end;">
+          <!-- SUMATERA -->
+          <div class="pulau-block" onclick="showPulau('sumatera')" style="background:linear-gradient(135deg,#1a472a,#2ecc71);border-radius:12px 4px 4px 40px;width:200px;height:120px;position:relative;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;">
+            <span style="font-size:11px;font-weight:700;color:white;letter-spacing:1px;text-transform:uppercase;">Sumatera</span>
+            <span style="font-size:10px;color:rgba(255,255,255,0.7);font-family:'DM Mono',monospace;">10 provinsi</span>
+            <div style="position:absolute;top:8px;right:8px;width:8px;height:8px;border-radius:50%;background:#2ecc71;box-shadow:0 0 6px #2ecc71;"></div>
+          </div>
+
+          <!-- KALIMANTAN -->
+          <div class="pulau-block" onclick="showPulau('kalimantan')" style="background:linear-gradient(135deg,#7d6608,#D4A843);border-radius:8px;width:180px;height:140px;position:relative;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;">
+            <span style="font-size:11px;font-weight:700;color:white;letter-spacing:1px;text-transform:uppercase;">Kalimantan</span>
+            <span style="font-size:10px;color:rgba(255,255,255,0.7);font-family:'DM Mono',monospace;">5 provinsi</span>
+            <div style="position:absolute;top:8px;right:8px;width:8px;height:8px;border-radius:50%;background:var(--emas);box-shadow:0 0 6px var(--emas);"></div>
+          </div>
+
+          <!-- SULAWESI -->
+          <div class="pulau-block" onclick="showPulau('sulawesi')" style="background:linear-gradient(135deg,#1a1a2e,#444);border-radius:8px 40px 8px 8px;width:100px;height:160px;position:relative;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;">
+            <span style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.6);letter-spacing:1px;text-transform:uppercase;text-align:center;">Sulawesi</span>
+            <span style="font-size:10px;color:rgba(255,255,255,0.4);font-family:'DM Mono',monospace;">6 prov</span>
+            <div style="position:absolute;top:8px;right:8px;width:8px;height:8px;border-radius:50%;background:#555;"></div>
+          </div>
+
+          <!-- MALUKU + PAPUA -->
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div class="pulau-block" onclick="showPulau('maluku')" style="background:linear-gradient(135deg,#1a1a2e,#333);border-radius:8px;width:90px;height:60px;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:2px;">
+              <span style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.5);text-transform:uppercase;">Maluku</span>
+              <span style="font-size:9px;color:rgba(255,255,255,0.3);font-family:'DM Mono',monospace;">2 prov</span>
+            </div>
+            <div class="pulau-block" onclick="showPulau('papua')" style="background:linear-gradient(135deg,#1a1a2e,#333);border-radius:8px;width:140px;height:80px;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:2px;">
+              <span style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.5);text-transform:uppercase;">Papua</span>
+              <span style="font-size:9px;color:rgba(255,255,255,0.3);font-family:'DM Mono',monospace;">6 provinsi</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 2: Jawa + Bali + NTB/NTT -->
+        <div style="display:flex;gap:12px;align-items:center;margin-left:40px;">
+          <!-- JAWA -->
+          <div class="pulau-block" onclick="showPulau('jawa')" style="background:linear-gradient(135deg,#1a472a,#27ae60);border-radius:4px 4px 8px 8px;width:260px;height:80px;position:relative;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;">
+            <span style="font-size:12px;font-weight:700;color:white;letter-spacing:1px;text-transform:uppercase;">Jawa & Bali</span>
+            <span style="font-size:10px;color:rgba(255,255,255,0.7);font-family:'DM Mono',monospace;">7 provinsi · Data lengkap</span>
+            <div style="position:absolute;top:8px;right:8px;width:8px;height:8px;border-radius:50%;background:#2ecc71;box-shadow:0 0 8px #2ecc71;animation:pulse 2s infinite;"></div>
+          </div>
+
+          <!-- NTB NTT -->
+          <div class="pulau-block" onclick="showPulau('nusatenggara')" style="background:linear-gradient(135deg,#1a1a2e,#333);border-radius:8px;width:100px;height:60px;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:2px;">
+            <span style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.5);text-transform:uppercase;text-align:center;">Nusa Tenggara</span>
+            <span style="font-size:9px;color:rgba(255,255,255,0.3);font-family:'DM Mono',monospace;">2 prov</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- POPUP PROVINSI -->
+      <div id="petaPopup" style="display:none;margin-top:24px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:24px;">
+        <div id="petaTitle" style="font-family:'Playfair Display',serif;font-size:20px;color:white;font-weight:700;margin-bottom:16px;"></div>
+        <div id="petaChips" style="display:flex;flex-wrap:wrap;gap:8px;"></div>
+      </div>
+    </div>
+
+    <!-- LEGEND -->
+    <div style="display:flex;gap:24px;margin-bottom:32px;flex-wrap:wrap;">
+      <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(255,255,255,0.5);font-family:'DM Mono',monospace;">
+        <span style="width:12px;height:12px;border-radius:2px;background:#2ecc71;display:inline-block"></span> Data lengkap
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(255,255,255,0.5);font-family:'DM Mono',monospace;">
+        <span style="width:12px;height:12px;border-radius:2px;background:var(--emas);display:inline-block"></span> Sebagian
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(255,255,255,0.5);font-family:'DM Mono',monospace;">
+        <span style="width:12px;height:12px;border-radius:2px;background:#333;display:inline-block"></span> Coming soon
+      </div>
+    </div>
+
+<style>
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 6px #2ecc71; }
+    50% { box-shadow: 0 0 14px #2ecc71; }
+  }
+  .pulau-block:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+  }
+</style>
+
+<script>
+  const pulauData = {
+    sumatera: {
+      nama: '🏝 Sumatera — 10 Provinsi',
+      provinsi: [
+        {nama:'Aceh',status:'aktif'},{nama:'Sumatera Utara',status:'aktif'},
+        {nama:'Sumatera Barat',status:'sebagian'},{nama:'Riau',status:'sebagian'},
+        {nama:'Kepulauan Riau',status:'coming'},{nama:'Jambi',status:'coming'},
+        {nama:'Sumatera Selatan',status:'coming'},{nama:'Bangka Belitung',status:'coming'},
+        {nama:'Bengkulu',status:'coming'},{nama:'Lampung',status:'coming'}
+      ]
+    },
+    jawa: {
+      nama: '🏝 Jawa & Bali — 7 Provinsi',
+      provinsi: [
+        {nama:'DKI Jakarta',status:'aktif'},{nama:'Jawa Barat',status:'aktif'},
+        {nama:'Jawa Tengah',status:'aktif'},{nama:'DI Yogyakarta',status:'aktif'},
+        {nama:'Jawa Timur',status:'sebagian'},{nama:'Banten',status:'sebagian'},
+        {nama:'Bali',status:'coming'}
+      ]
+    },
+    kalimantan: {
+      nama: '🏝 Kalimantan — 5 Provinsi',
+      provinsi: [
+        {nama:'Kalimantan Barat',status:'sebagian'},{nama:'Kalimantan Tengah',status:'coming'},
+        {nama:'Kalimantan Selatan',status:'coming'},{nama:'Kalimantan Timur',status:'coming'},
+        {nama:'Kalimantan Utara',status:'coming'}
+      ]
+    },
+    sulawesi: {
+      nama: '🏝 Sulawesi — 6 Provinsi',
+      provinsi: [
+        {nama:'Sulawesi Utara',status:'coming'},{nama:'Sulawesi Tengah',status:'coming'},
+        {nama:'Sulawesi Selatan',status:'coming'},{nama:'Sulawesi Tenggara',status:'coming'},
+        {nama:'Gorontalo',status:'coming'},{nama:'Sulawesi Barat',status:'coming'}
+      ]
+    },
+    maluku: {
+      nama: '🏝 Maluku — 2 Provinsi',
+      provinsi: [
+        {nama:'Maluku',status:'coming'},{nama:'Maluku Utara',status:'coming'}
+      ]
+    },
+    papua: {
+      nama: '🏝 Papua — 5 Provinsi',
+      provinsi: [
+        {nama:'Papua',status:'coming'},{nama:'Papua Barat',status:'coming'},
+        {nama:'Papua Barat Daya',status:'coming'},{nama:'Papua Selatan',status:'coming'},
+        {nama:'Papua Tengah',status:'coming'},{nama:'Papua Pegunungan',status:'coming'}
+      ]
+    },
+    nusatenggara: {
+      nama: '🏝 Nusa Tenggara — 2 Provinsi',
+      provinsi: [
+        {nama:'NTB',status:'coming'},{nama:'NTT',status:'coming'}
+      ]
+    }
+  };
+
+  function showPulau(id) {
+    const data = pulauData[id];
+    const popup = document.getElementById('petaPopup');
+    document.getElementById('petaTitle').textContent = data.nama;
+    const chips = document.getElementById('petaChips');
+    chips.innerHTML = data.provinsi.map(p => `
+      <div class="prov-chip ${p.status}" onclick="pilihProvinsi('${p.nama}')">${p.nama}</div>
+    `).join('');
+    popup.style.display = 'block';
+    popup.scrollIntoView({behavior:'smooth', block:'nearest'});
+  }
+</script>
+
+    <!-- LEGEND -->
+    <div style="display:flex;gap:24px;margin-bottom:32px;flex-wrap:wrap;">
+      <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(255,255,255,0.5);font-family:'DM Mono',monospace;">
+        <span style="width:12px;height:12px;border-radius:2px;background:#2ecc71;display:inline-block"></span> Data lengkap
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(255,255,255,0.5);font-family:'DM Mono',monospace;">
+        <span style="width:12px;height:12px;border-radius:2px;background:var(--emas);display:inline-block"></span> Sebagian
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(255,255,255,0.5);font-family:'DM Mono',monospace;">
+        <span style="width:12px;height:12px;border-radius:2px;background:#333;display:inline-block"></span> Coming soon
+      </div>
+    </div>
+
+    <!-- PULAU SUMATERA -->
+    <div style="margin-bottom:32px;">
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;color:rgba(255,255,255,0.3);text-transform:uppercase;margin-bottom:12px;">🏝 Sumatera</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;">
+        <div class="prov-chip aktif" onclick="pilihProvinsi('Aceh')">Aceh</div>
+        <div class="prov-chip aktif" onclick="pilihProvinsi('Sumatera Utara')">Sumatera Utara</div>
+        <div class="prov-chip sebagian" onclick="pilihProvinsi('Sumatera Barat')">Sumatera Barat</div>
+        <div class="prov-chip sebagian" onclick="pilihProvinsi('Riau')">Riau</div>
+        <div class="prov-chip coming" onclick="pilihProvinsi('Kepulauan Riau')">Kepulauan Riau</div>
+        <div class="prov-chip coming" onclick="pilihProvinsi('Jambi')">Jambi</div>
+        <div class="prov-chip coming" onclick="pilihProvinsi('Sumatera Selatan')">Sumatera Selatan</div>
+        <div class="prov-chip coming" onclick="pilihProvinsi('Bangka Belitung')">Bangka Belitung</div>
+        <div class="prov-chip coming" onclick="pilihProvinsi('Bengkulu')">Bengkulu</div>
+        <div class="prov-chip coming" onclick="pilihProvinsi('Lampung')">Lampung</div>
+      </div>
+    </div>
+
+    <!-- PULAU JAWA -->
+    <div style="margin-bottom:32px;">
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;color:rgba(255,255,255,0.3);text-transform:uppercase;margin-bottom:12px;">🏝 Jawa & Bali</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;">
+        <div class="prov-chip aktif" onclick="pilihProvinsi('DKI Jakarta')">DKI Jakarta ⭐</div>
+        <div class="prov-chip sebagian" onclick="pilihProvinsi('Jawa Barat')">Jawa Barat</div>
+        <div class="prov-chip sebagian" onclick="pilihProvinsi('Banten')">Banten</div>
+        <div class="prov-chip coming" onclick="pilihProvinsi('Jawa Tengah')">Jawa Tengah</div>
+        <div class="prov-chip coming" onclick="pilihProvinsi('DI Yogyakarta')">DI Yogyakarta</div>
+        <div class="prov-chip coming" onclick="pilihProvinsi('Jawa Timur')">Jawa Timur</div>
+        <div class="prov-chip coming" onclick="pilihProvinsi('Bali')">Bali</div>
+      </div>
+    </div>
+
+    <!-- KALIMANTAN -->
+    <div style="margin-bottom:32px;">
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;color:rgba(255,255,255,0.3);text-transform:uppercase;margin-bottom:12px;">🏝 Kalimantan</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;">
+        <div class="prov-chip coming" onclick="pilihProvinsi('Kalimantan Barat')">Kalimantan Barat</div>
+        <div class="prov-chip coming" onclick="pilihProvinsi('Kalimantan Tengah')">Kalimantan Tengah</div>
+        <div class="prov-chip coming" onclick="pilihProvinsi('Kalimantan Selatan')">Kalimantan Selatan</div>
+        <div class="prov-chip coming" onclick="pilihProvinsi('Kalimantan Timur')">Kalimantan Timur</div>
+        <div class="prov-chip coming" onclick="pilihProvinsi('Kalimantan Utara')">Kalimantan Utara</div>
+      </div>
+    </div>
+
+    <!-- SULAWESI -->
+    <div style="margin-bottom:32px;">
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;color:rgba(255,255,255,0.3);text-transform:uppercase;margin-bottom:12px;">🏝 Sulawesi</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;">
+        <div class="prov-chip coming" onclick="pilihProvinsi('Sulawesi Utara')">Sulawesi Utara</div>
+        <div class="prov-chip coming" onclick="pilihProvinsi('Gorontalo')">Gorontalo</div>
+        <div class="prov-chip coming" onclick="pilihProvinsi('Sulawesi Tengah')">Sulawesi Tengah</div>
+        <div class="prov-chip coming" onclick="pilihProvinsi('Sulawesi Barat')">Sulawesi Barat</div>
+        <div class="prov-chip coming" onclick="pilihProvinsi('Sulawesi Selatan')">Sulawesi Selatan</div>
+        <div class="prov-chip coming" onclick="pilihProvinsi('Sulawesi Tenggara')">Sulawesi Tenggara</div>
+      </div>
+    </div>
+
+    <!-- NUSA TENGGARA & MALUKU & PAPUA -->
+    <div style="margin-bottom:40px;">
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;color:rgba(255,255,255,0.3);text-transform:uppercase;margin-bottom:12px;">🏝 Nusa Tenggara · Maluku · Papua</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;">
+        <div class="prov-chip coming" onclick="pilihProvinsi('NTB')">NTB</div>
+        <div class="prov-chip coming" onclick="pilihProvinsi('NTT')">NTT</div>
+        <div class="prov-chip coming" onclick="pilihProvinsi('Maluku')">Maluku</div>
+        <div class="prov-chip coming" onclick="pilihProvinsi('Maluku Utara')">Maluku Utara</div>
+        <div class="prov-chip coming" onclick="pilihProvinsi('Papua')">Papua</div>
+        <div class="prov-chip coming" onclick="pilihProvinsi('Papua Barat')">Papua Barat</div>
+        <div class="prov-chip coming" onclick="pilihProvinsi('Papua Barat Daya')">Papua Barat Daya</div>
+        <div class="prov-chip coming" onclick="pilihProvinsi('Papua Selatan')">Papua Selatan</div>
+        <div class="prov-chip coming" onclick="pilihProvinsi('Papua Tengah')">Papua Tengah</div>
+        <div class="prov-chip coming" onclick="pilihProvinsi('Papua Pegunungan')">Papua Pegunungan</div>
+      </div>
+    </div>
+
+    <!-- POPUP INFO -->
+    <div id="provPopup" style="display:none;background:white;border-radius:12px;padding:24px;max-width:400px;margin:0 auto;text-align:center;">
+      <div id="provNama" style="font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:var(--hitam);margin-bottom:8px;"></div>
+      <div id="provStatus" style="font-size:13px;color:#888;font-family:'DM Mono',monospace;margin-bottom:16px;"></div>
+      <button onclick="document.getElementById('provPopup').style.display='none'" style="background:var(--merah);color:white;border:none;padding:10px 24px;border-radius:6px;cursor:pointer;font-family:'DM Sans',sans-serif;font-weight:600;">Tutup</button>
+    </div>
+  </div>
+</section>
+
+<style>
+  .prov-chip {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1.5px solid transparent;
+  }
+  .prov-chip.aktif {
+    background: rgba(46,204,113,0.15);
+    border-color: rgba(46,204,113,0.4);
+    color: #2ecc71;
+  }
+  .prov-chip.aktif:hover {
+    background: rgba(46,204,113,0.25);
+    transform: translateY(-2px);
+  }
+  .prov-chip.sebagian {
+    background: rgba(212,168,67,0.15);
+    border-color: rgba(212,168,67,0.4);
+    color: var(--emas);
+  }
+  .prov-chip.sebagian:hover {
+    background: rgba(212,168,67,0.25);
+    transform: translateY(-2px);
+  }
+  .prov-chip.coming {
+    background: rgba(255,255,255,0.04);
+    border-color: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.3);
+  }
+  .prov-chip.coming:hover {
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.5);
+  }
+</style>
+
+<script>
+  function pilihProvinsi(nama) {
+    const chip = event.target;
+    const popup = document.getElementById('provPopup');
+    const isAktif = chip.classList.contains('aktif');
+    const isSebagian = chip.classList.contains('sebagian');
+
+    document.getElementById('provNama').textContent = '📍 ' + nama;
+
+    if (isAktif) {
+      document.getElementById('provStatus').textContent = '✅ Data tersedia — klik Cek Sekarang untuk lihat pejabat di provinsi ini';
+    } else if (isSebagian) {
+      document.getElementById('provStatus').textContent = '🟡 Data sebagian tersedia — sedang dilengkapi oleh tim & volunteer';
+    } else {
+      document.getElementById('provStatus').textContent = '⏳ Coming soon — bantu kami lengkapi data provinsi ini di GitHub!';
+    }
+
+    popup.style.display = 'block';
+    popup.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+</script>
+
 <!-- HOW IT WORKS -->
 <section class="how-section">
   <div class="how-inner">
